@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 70% 25%;
+    --card: 0 20% 98%;
+    --card-foreground: 0 70% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 70% 25%;
+    --primary: 0 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 30% 95%;
+    --secondary-foreground: 0 70% 30%;
+    --muted: 0 20% 95%;
+    --muted-foreground: 0 40% 45%;
+    --accent: 0 30% 95%;
+    --accent-foreground: 0 70% 30%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 30% 85%;
+    --input: 0 0% 100%;
+    --ring: 0 70% 50%;
+    --radius: 1rem;
+  }
+}
+
+/* Animaciones suaves en tonos rojos */
+@keyframes soft-red-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+}
+
+.soft-red-pulse {
+  animation: soft-red-pulse 2s infinite;
+}
+
+/* Gradientes suaves para fondos */
+@keyframes gentle-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gentle-bg {
+  background: linear-gradient(
+    45deg,
+    rgba(254, 242, 242, 1) 0%,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(254, 226, 226, 1) 50%,
+    rgba(255, 255, 255, 1) 75%,
+    rgba(254, 242, 242, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gentle-gradient 8s ease-in-out infinite;
+}
+
+/* Scrollbar en tonos rojos suaves */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fef2f2;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fca5a5, #ef4444);
+  border-radius: 5px;
+  border: 1px solid #fecaca;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #f87171, #dc2626);
+}
+
+/* Efectos de hover suaves */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.15);
+}
+
+/* Texto con gradiente rojo suave */
+.text-gradient-red {
+  background: linear-gradient(135deg, #dc2626, #ef4444, #f87171);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
