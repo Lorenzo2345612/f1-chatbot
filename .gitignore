@@ -1,0 +1,11 @@
+venv
+.vscode
+
+frontend/node_modules
+frontend/.next
+
+# Pycache
+backend/**/__pycache__
+backend/tmp
+backend/.env
+backend/*.json
